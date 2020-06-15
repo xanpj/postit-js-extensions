@@ -8,13 +8,13 @@ Your project needs to be a [**diagram-js**](https://github.com/bpmn-io/diagram-j
 
 Import the modules in your modeler.js (or the place where you add your modules)
 
-````
+```javascript
 import SelectionOrganizerModule from './features/selection-organizer';
 import DragDropImagesModule from './features/drag-drop-images';
 ````
 and add them as additionalModules
 
-```
+```javascript
 Modeler.prototype._modelingModules = [
   ...
   SelectionOrganizerModule,
@@ -25,11 +25,11 @@ Modeler.prototype._modelingModules = [
 
 ## Modules
 ### Drag-Drop-Images
-<div style="width:200px">![drag-drop-images-1](./docs/drag-drop-images-1.png)</div>
+![drag-drop-images-1](./docs/drag-drop-images-1.png)
 
-<div style="width:200px">![drag-drop-images-2](./docs/drag-drop-images-2.png)</div>
+![drag-drop-images-2](./docs/drag-drop-images-2.png)
 
 ### Selection-Organizer
-<div style="width:200px">![selection-organizer-1](./docs/selection-organizer-1.png)</div>
+![selection-organizer-1](./docs/selection-organizer-1.png)
 
-<div style="width:200px">![selection-organizer-2](./docs/selection-organizer-2.png)</div>
+![selection-organizer-2](./docs/selection-organizer-2.png)
