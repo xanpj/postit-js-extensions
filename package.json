@@ -1,0 +1,26 @@
+{
+  "name": "postit-js-extensions",
+  "version": "1.0.0",
+  "description": "A community maintained set of extensions for diagram-js based projects such as postit-js",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xanpj/postit-js-extensions.git"
+  },
+  "keywords": [
+    "postit-js"
+  ],
+  "author": "xanpj",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xanpj/postit-js-extensions/issues"
+  },
+  "homepage": "https://github.com/xanpj/postit-js-extensions#readme"
+}
