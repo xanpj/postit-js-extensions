@@ -15,12 +15,14 @@ Then in your main loader choose the modules to import from the extensions.
 ```javascript
 import PostItExtensions from 'postit-js-extensions';
 ...
-additionalModules: [
-   ...
-   PostItExtensions.DragDropImages,
-   PostItExtensions.SelectionOrganizer,
-   ...
- ]
+var modeler = new DiagramJsModeler({
+    ...
+    additionalModules: [
+       ...
+       PostItExtensions.DragDropImages,
+       PostItExtensions.SelectionOrganizer,
+     ]
+ });
 ```
 
 ### Manual install
@@ -33,7 +35,7 @@ Import the modules in your modeler.js (or the place where you add your modules)
 import SelectionOrganizerModule from './features/selection-organizer';
 import DragDropImagesModule from './features/drag-drop-images';
 ```
-and add them as additionalModules
+and add them as additionalModules (or  `_modelingModules` in postit-js)
 
 ```javascript
 Modeler.prototype._modelingModules = [
