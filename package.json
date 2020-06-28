@@ -22,5 +22,11 @@
   "bugs": {
     "url": "https://github.com/xanpj/postit-js-extensions/issues"
   },
-  "homepage": "https://github.com/xanpj/postit-js-extensions#readme"
+  "homepage": "https://github.com/xanpj/postit-js-extensions#readme",
+  "dependencies": {
+    "immutable": "^4.0.0-rc.12",
+    "less": "^3.11.3",
+    "less-loader": "^6.1.2",
+    "lodash": "^4.17.15"
+  }
 }

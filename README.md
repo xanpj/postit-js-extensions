@@ -3,6 +3,9 @@ A collection of extensions for [**diagram-js**](https://github.com/bpmn-io/diagr
 
 ## Installation
 
+### dependencies
+- The extension **properties-panel** is dependent on functions in **postit-js** and the npm packages less, immutable, lodash
+
 ### npm install
 You can install the project via npm directly from git:
 
@@ -55,3 +58,6 @@ Modeler.prototype._modelingModules = [
 ![selection-organizer-1](./docs/selection-organizer-1.png)
 
 ![selection-organizer-2](./docs/selection-organizer-2.png)
+
+### Properties-Panel
+![properties-panel-1](./docs/properties-panel-1.png)
