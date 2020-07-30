@@ -1,32 +1,62 @@
 {
-  "name": "postit-js-extensions",
-  "version": "1.0.0",
-  "description": "A community maintained set of extensions for diagram-js based projects such as postit-js",
-  "main": "index.js",
-  "directories": {
-    "doc": "docs",
-    "lib": "lib"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
+  "_from": "git+https://github.com/xanpj/postit-js-extensions.git",
+  "_id": "postit-js-extensions@1.0.0",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/postit-js-extensions",
+  "_phantomChildren": {},
+  "_requested": {
     "type": "git",
-    "url": "git+https://github.com/xanpj/postit-js-extensions.git"
+    "raw": "git+https://github.com/xanpj/postit-js-extensions.git",
+    "rawSpec": "git+https://github.com/xanpj/postit-js-extensions.git",
+    "saveSpec": "git+https://github.com/xanpj/postit-js-extensions.git",
+    "fetchSpec": "https://github.com/xanpj/postit-js-extensions.git",
+    "gitCommittish": null
   },
-  "keywords": [
-    "postit-js"
+  "_requiredBy": [
+    "#USER",
+    "/"
   ],
-  "author": "xanpj",
-  "license": "ISC",
+  "_resolved": "git+https://github.com/xanpj/postit-js-extensions.git#70ac971e38de843452aaa1e81c289d2244650c45",
+  "_spec": "git+https://github.com/xanpj/postit-js-extensions.git",
+  "_where": "/Users/admin/Documents/code/diagramtest/postit-js-2/example",
+  "author": {
+    "name": "xanpj"
+  },
   "bugs": {
     "url": "https://github.com/xanpj/postit-js-extensions/issues"
   },
-  "homepage": "https://github.com/xanpj/postit-js-extensions#readme",
+  "bundleDependencies": false,
   "dependencies": {
     "immutable": "^4.0.0-rc.12",
     "less": "^3.11.3",
     "less-loader": "^6.1.2",
     "lodash": "^4.17.15"
+  },
+  "deprecated": false,
+  "description": "A community maintained set of extensions for diagram-js based projects such as postit-js",
+  "directories": {
+    "doc": "docs",
+    "lib": "lib"
+  },
+  "homepage": "https://github.com/xanpj/postit-js-extensions#readme",
+  "keywords": [
+    "postit-js"
+  ],
+  "license": "ISC",
+  "main": "index.js",
+  "name": "postit-js-extensions",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xanpj/postit-js-extensions.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint ."
+  },
+  "version": "1.0.0",
+  "devDependencies": {
+    "eslint": "^7.5.0",
+    "eslint-plugin-bpmn-io": "^0.11.0"
   }
 }

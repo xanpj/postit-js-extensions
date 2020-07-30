@@ -1,0 +1,469 @@
+/*** IMAGE SELECTION ***/
+@border: 1px solid #cdcdcd;
+@boxshadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2) !important;
+#pjs-image-selection-modal {
+    position: absolute;
+    z-index: 5;
+    left: 0px;
+    top: 0px;
+    display: flex;
+    align-items: center;
+
+    .pjs-io-dialog-section.pjs-io-dialog-section-image-upload,
+    .pjs-io-dialog-section.pjs-io-dialog-section-submit {
+        padding-top: 0px;
+    }
+    
+    #pjs-image-selection-wrapper {
+        max-height: 600px;
+        overflow-y: auto;
+    }
+    #pjs-image-selection-grid {
+        display: inline-block;
+        position: relative;
+        width: 100%;
+    }
+    #pjs-image-selection-grid-divider {
+        width: 1px;
+        background: black;
+        height: 100%;
+        position: absolute;
+        margin-left: 4px;
+        top: 0;
+        float: left;
+        display: inline-block;
+    }
+    .pjs-stacked-image-selection-modal-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .pjs-image-selection-middle-box {
+        z-index: 4;
+        position: absolute;
+        /*width: 100%;
+        height: 100%;*/
+        &.active {
+            border-color: #FF9D48;
+        }
+        img {
+            width: 100px;
+            height: 100px;
+        }
+        .pjs-img-pos-0 {
+            z-index: 4;
+            position: absolute;
+            margin-top: -40px;
+            margin-left: 35px;
+            width: 50px;
+            /*defaults for placeholder img*/
+            height: 46px;
+            /*defaults for placeholder img*/
+        }
+        .pjs-img-pos-1 {
+            z-index: 3;
+            position: absolute;
+            margin-left: 10px;
+            margin-top: -20px;
+            width: 50px;
+            /*defaults for placeholder img*/
+            height: 50px;
+            /*defaults for placeholder img*/
+        }
+    }
+    #pjs-image-selection-middle {
+        .pjs-image-selection-middle-box-wrapper {
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            padding: 20px;
+            padding-bottom: 0;
+            padding-top: 0;
+            position: relative;
+            button {
+                padding: 0;
+                margin: 0;
+            }
+        }
+        .pjs-image-selection-middle-box {
+            border: 1px solid #030303;
+            height: 100px;
+            width: 100px;
+        }
+        &:hover {
+            .pjs-image-selection-middle-box {
+                cursor: pointer;
+                filter: invert(69%) sepia(49%) saturate(761%) hue-rotate(329deg) brightness(100%) contrast(102%);
+            }
+        }
+        .pjs-image-selection-middle-box-wrapper button {
+            &:hover, &.active {
+                cursor: pointer;
+                filter: invert(69%) sepia(49%) saturate(761%) hue-rotate(329deg) brightness(100%) contrast(102%);
+            }
+            img {
+                width: 50px;
+                height: 46px;
+            }
+        }
+    }
+    #pjs-image-selection-main {
+        float: right;
+        min-width: 300px;
+    }
+    #pjs-image-selection-editor {
+        position: relative;
+        float: left;
+        margin: 0 auto;
+    }
+    #pjs-image-selection-editor-inner {
+        padding: 20px;
+    }
+    .pjs-stacked-image-text {
+        font-weight: bold;
+        font-family: 'Helvetica Neue';
+        font-size: 15px;
+        color: #000 !important;
+    }
+    #pjs-image-selection-wrapper {
+        margin: 0 auto;
+        &.fromTarget, &.active {
+            border: 3px solid #32CD32;
+            margin-top: 0px;
+            height: 100%;
+            display: block;
+            padding: 0;
+        }
+        &.fromTarget::before, &.active::before {
+            font-family: "Font Awesome 5 Free Solid";
+            color: #FFF;
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            position: absolute;
+            padding: 2px;
+            z-index: 5;
+        }
+        &.active::before {
+            content: "\F00C";
+            background-color: #32CD32;
+        }
+        &.fromTarget::before {
+            content: "\F05B";
+            background-color: #32CD32;
+        }
+    }
+    #pjs-image-editor-0 {
+        margin-left: 50px;
+        z-index: 4;
+        img {
+            z-index: 4;
+        }
+    }
+    #pjs-image-editor-1 {
+        margin-left: 0px;
+        margin-top: -90px;
+        z-index: 3;
+        img {
+            z-index: 3;
+        }
+    }
+    .pjs-image-stacked-editor-box {
+        background-color: #F8F8F8;
+        border: 1px solid #CDCDCD;
+        border-radius: 4px;
+        height: 100px;
+        width: 100px;
+        padding: 20px;
+        margin: 0 auto;
+        font-size: 13px;
+        color: #999;
+        display: flex;
+        align-items: center;
+        & .pjs-stacked-image-text {
+            z-index: 5;
+            font-size: 25px;
+        }
+        img {
+            width: 100px;
+            height: 100px;
+        }
+        &.draggedActive {
+            border: 3px dashed #000;
+        }
+    }
+    button.pjs-image-selection-use {
+        background-color: #32CD32 !important;
+        width: 102px;
+        margin-left: -1px;
+        margin-top: 2px;
+        border: 1px solid #32CD32;
+        border-radius: 0px 0px 4px 4px;
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+    .pjs-buttons.pjs-image-selection-use-wrapper {
+        position: relative;
+        width: 100px;
+        height: 33px;
+        margin: 0 auto;
+    }
+    #pjs-image-selection-input-grabber-wrapper {
+        position: relative;
+        float: right;
+        width: 10%;
+    }
+    #pjs-image-selection-input-grabber {
+        background-color: #999;
+        /*position: absolute;*/
+        padding: 5px;
+        /*left: -4px;*/
+        float: right;
+        width: 20px;
+        margin: 0 auto;
+        text-align: center;
+        border-radius: 0px;
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+        color: #FFF;
+        padding-left: 12px;
+        &:hover {
+            cursor: pointer;
+            background-color: #999+#111;
+        }
+        &:active {
+            box-shadow: @boxshadow;
+        }
+        span {
+            margin-left: -7px;
+        }
+        span::before {
+            content: '\F067';
+        }
+    }
+    #pjs-image-selection-input-wrapper {
+        width: 100%;
+    }
+    #pjs-image-selection-input {
+        width: 90%;
+        margin: 0;
+    }
+    #pjs-image-selection-input-wrapper input {
+        padding-left: 90px; /* "Search / URL" */
+        border-top-right-radius: 0px !important;
+        border-bottom-right-radius: 0px !important;
+        /*padding-left: 50px;*/
+        /* "URL" */
+    }
+    #pjs-image-dialog-text-hint-list li {
+        line-height: 22px;
+        margin-left: 3px;
+    }
+    #pjs-image-dialog-text-hint-list li:first-child {
+        margin-left: 3px;
+    }
+    #pjs-image-dialog-text-hint-list li div {
+        display: inline-block;
+    }
+    #pjs-image-dialog-text-hint-list li:last-child {
+        margin-left: 5px;
+    }
+    #pjs-image-dialog-text-hint-list a {
+        display: block;
+        cursor: pointer;
+    }
+    #pjs-image-dialog-text-hint-list a:hover {
+        cursor: pointer;
+        color: #777;
+    }
+    .pjs-labeled-input {
+        position: relative;
+    }
+    .pjs-image-dialog-upload-icon, .pjs-image-dialog-upload-icon-error {
+        margin-left: 3px;
+        margin-right: 3px;
+        box-sizing: border-box;
+        cursor: pointer;
+        font-size: 18px;
+    }
+    .pjs-image-dialog-upload-icon-error {
+        margin-left: 0px;
+    }
+    .pjs-image-dialog-upload-icon-warning::before {
+        content: '\F071';
+        display: inline-block;
+        color: #CCCC00;
+    }
+    .pjs-image-dialog-upload-icon::before {
+        content: '\F106';
+        display: inline-block;
+    }
+    .pjs-image-dialog-upload-icon-error::before {
+        content: '\F057';
+        display: inline-block;
+        color: #ff0000;
+    }
+    #pjs-image-selection-files-text-error {
+        display: none;
+        color: #ff0000;
+    }
+    #pjs-image-selection-files-text-upload {
+        font-weight: bold;
+        color: #555555;
+    }
+    .pjs-input-text-static {
+        position: absolute;
+        left: 10px;
+        font-weight: bold;
+        font-size: 0.8em;
+        color: #555;
+        top: -21px;
+        line-height: 13.5px
+    }
+    .pjs-io-dialog-text-hint {
+        padding-top: 10px;
+        padding-bottom: 0px;
+    }
+    .pjs-buttons.pjs-image-selection-submit-wrapper {
+        position: relative;
+    }
+    .pjs-buttons.pjs-image-selection-submit-wrapper button {
+        width: 100%;
+    }
+    .pjs-buttons.pjs-image-selection-submit-wrapper button:hover {
+        color: #555;
+    }
+    .pjs-buttons.pjs-image-selection-submit-wrapper button:active {
+        opacity: 1.0;
+        box-shadow: 0px 2px 2px 0 rgba(0, 0, 0, 0.1);
+    }
+
+
+    /* flex box grid */
+
+    .pjs-grid-wrapper {
+        display: grid;
+        width: 100%;
+        &.pjs-grid-2 {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        &.pjs-grid-1 {
+            grid-template-columns: repeat(6, 1fr);
+        }
+        &:nth-child(1) {
+            float: left;
+        }
+        &:nth-child(2) {
+            float: right;
+        }
+    }
+    .pjs-grid-col {
+        width: 60px;
+        height: 60px;
+        margin: 0 auto;
+        margin-bottom: 0px;
+        margin-left: 2px;
+        position: relative;
+        img {
+            height: 100%;
+            width: 100%;
+            box-shadow: @boxshadow;
+        }
+        button {
+            margin-top: 0px;
+            width: 80%;
+            height: 80%;
+            margin: 10%;
+            display: block;
+            padding: 0;
+            /*CSS ORDER IS IMPORTANT */
+            &.fromCanvas, &.active, &.fromTarget {
+                border: 3px solid #32CD32;
+                margin-top: 0px;
+                margin: 0;
+                width: 100%;
+                height: 100%;
+                display: block;
+                padding: 0;
+            }
+            &.fromCanvas {
+                border-color: #999;
+            }
+            &.active {
+                border-color: #32CD32;
+            }
+            &.fromTarget {
+                border-color: #32CD32;
+            }
+            &.fromCanvas::before, &.active::before, &.fromTarget::before {
+                font-family: "Font Awesome 5 Free Solid";
+                color: #FFF;
+                width: 20px;
+                height: 20px;
+                line-height: 20px;
+                position: absolute;
+                padding: 2px;
+                top: 0;
+                left: 0;
+                z-index: 5;
+            }
+            &.fromCanvas::before {
+                background-color: #999;
+                content: "\F192";
+            }
+            &.active::before {
+                background-color: #32CD32;
+                content: "\F00C";
+            }
+            &.fromTarget::before {
+                background-color: #32CD32;
+                content: "\F05B";
+            }
+        }
+        button:hover {
+            margin-top: 0px;
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+            padding: 0;
+        }
+    }
+    .pjs-row {
+        box-sizing: border-box;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+        flex: 0 1 auto;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -ms-flex-wrap: wrap-reverse;
+        flex-wrap: wrap-reverse;
+    }
+    .pjs-col-xs {
+        -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        -ms-flex-preferred-size: 0;
+        flex-basis: 0;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    .pjs-box, .pjs-box-first, .pjs-box-large, .pjs-box-nested, .pjs-box-row {
+        position: relative;
+        box-sizing: border-box;
+        min-height: 1rem;
+        margin-bottom: 0;
+        border: 1px solid #FFF;
+        border-radius: 2px;
+        overflow: hidden;
+        text-align: center;
+        color: #fff;
+    }
+}
+/*** END IMAGE SELECTION ***/
