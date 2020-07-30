@@ -4,7 +4,8 @@ A collection of extensions for [**diagram-js**](https://github.com/bpmn-io/diagr
 ## Installation
 
 ### dependencies
-- The extension **properties-panel** is dependent on functions in **postit-js** and the npm packages less, immutable, lodash
+- The extensions **properties-panel**, **properties-panel-v2** and **image-selection-v2** are dependent on functions in **postit-js** and the npm packages less, immutable, lodash
+- **properties-panel-v2** and **image-selection-v2** are dependent on the extension **entry-factory**
 
 ### npm install
 You can install the project via npm directly from git:
@@ -29,7 +30,8 @@ var modeler = new DiagramJsModeler({
 ```
 
 ### Manual install
-Drag the folders of your chosen modules from this `lib/features/` directory into your project's `lib/features/` folder.
+Drag the folders of your chosen modules from this `lib/features/` directory into your project's `lib/features/` folder. Ensure you also drag any dependencies if necessary.
+
 Your project needs to be a [**diagram-js**](https://github.com/bpmn-io/diagram-js) based projects i.e. [**bpmn-js**](https://github.com/bpmn-io/bpmn-js), [**postit-js**](https://github.com/pinussilvestrus/postit-js) etc.
 
 Import the modules in your modeler.js (or the place where you add your modules)
@@ -61,3 +63,10 @@ Modeler.prototype._modelingModules = [
 
 ### Properties-Panel
 ![properties-panel-1](./docs/properties-panel-1.png)
+
+### Properties-Panel v2
+![properties-panel-v2](./docs/properties-panel-v2.png)
+
+### Image-Selection v2
+![image-selection-v2](./docs/image-selection-v2.png)
+
