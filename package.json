@@ -28,7 +28,7 @@
   },
   "bundleDependencies": false,
   "dependencies": {
-    "immutable": "^4.0.0-rc.12",
+    "immutable": "^4.0.0",
     "less": "^3.11.3",
     "less-loader": "^6.1.2",
     "lodash": "^4.17.15"

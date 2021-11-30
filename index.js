@@ -16,6 +16,6 @@ export default {
   DragDropImages: DragDropImagesModule,
   SelectionOrganizer: SelectionOrganizerModule,
   PropertiesPanel: PropertiesPanelModule,
-  ImageSelectionV2Module: ImageSelectionV2Module,
+  ImageSelectionV2: ImageSelectionV2Module,
 };
 
